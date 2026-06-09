@@ -1,0 +1,61 @@
+.mythBuster {
+  padding: 5rem 0;
+  background-color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 800px;
+  background-color: var(--color-on-primary);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-destructive);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.content p {
+  color: #334155;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.solutionBox {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-background);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0;
+  color: var(--color-foreground);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1.5rem;
+  }
+  .content h2 {
+    font-size: 1.5rem;
+  }
+}

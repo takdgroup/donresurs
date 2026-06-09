@@ -1,0 +1,217 @@
+.hero {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0 4rem;
+  z-index: 1;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255,255,255,0.1);
+  color: #38BDF8;
+  padding: 0.5rem 1.25rem;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #F8FAFC;
+  font-weight: 800;
+}
+
+.highlight {
+  color: var(--color-primary);
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+  font-weight: 400;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  font-size: 1.25rem;
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0369A1 100%);
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+}
+
+/* Glassmorphism Form Card */
+.formWrapper {
+  position: relative;
+}
+
+.formWrapper::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 32px;
+  filter: blur(30px);
+  opacity: 0.25;
+  z-index: -1;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; transform: scale(0.95); }
+  100% { opacity: 0.4; transform: scale(1.05); }
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.leadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.leadForm h3 {
+  font-size: 1.875rem;
+  color: var(--color-foreground);
+  text-align: center;
+  font-weight: 800;
+}
+
+.leadForm p {
+  text-align: center;
+  color: #64748B;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.input {
+  width: 100%;
+  padding: 1.25rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.9);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0369A1 100%);
+  color: white;
+  padding: 1.25rem;
+  border-radius: 14px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.6);
+}
+
+.urgencyAlert {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-destructive);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+}
+
+.successBox {
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.successBox h3 {
+  font-size: 1.75rem;
+  color: var(--color-foreground);
+}
+
+.successBox p {
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.5rem; }
+  .formCard { padding: 1.5rem; }
+  .hero { padding: 6rem 0 3rem; }
+}

@@ -1,0 +1,9 @@
+.reviews { padding: 5rem 0; background-color: var(--color-muted); }
+.container { max-width: 1000px; margin: 0 auto; }
+.title { font-size: 2rem; text-align: center; margin-bottom: 3rem; color: var(--color-foreground); }
+.grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+.card { background: var(--color-on-primary); padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+.stars { display: flex; gap: 0.25rem; margin-bottom: 1rem; }
+.text { font-size: 1.125rem; color: #334155; font-style: italic; margin-bottom: 1.5rem; line-height: 1.6; }
+.author { font-weight: 600; color: var(--color-foreground); }
